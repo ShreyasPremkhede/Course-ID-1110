@@ -290,42 +290,64 @@ columns=fullflexible
 \newcommand \tab [1][1cm]{\hspace*{#1}}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage[utf8]{inputenc}
-\renewcommand\arraystretch{1.3}
 \title{AI 1110 Assignment 1}
 \begin{document}
 \author{Name: Shreyas Premkhede\\Roll no.: CS22BTECH11053}
 \maketitle
 
-\noindent \textbf{12.13.2.12 Question:} A die is tossed thrice. Find the probability of getting an odd number at least once. \\
-\\
-\textbf{Answer:}  $\left(\frac {7}{8}\right)$ \\
-\\
-\textbf{Solution: } \\
-Let $'p'$ be the probability of getting an odd number atleast once.\\
-Then $'p'$ is equal to the compliment of getting an even number on every die toss.\\
+\textbf{12.13.2.12 Question:} A die is tossed thrice. Find the probability of getting an odd number at least once. 
+
+
+\textbf{Answer:}  \(\frac{7}{8}\)
+
+
+\textbf{Solution: } 
+
+
+Let X,Y,Z be three Bernoulli random variables defined as follows -
+
+X = 1 , if odd number occurs on the first roll of die.
+ 
+X = 0 , otherwise
+
+Y = 1 , if odd number occurs on the second roll of die.
+
+Y = 0 , otherwise
+
+Z = 1 , if odd number occurs on the third roll of die.
+
+Z = 0 , otherwise
+
+Let $'Pr'$ be the probability of getting an odd number atleast once.
+
+Then $'Pr'$ is equal to the compliment of getting an even number on every die toss.
+
 Now since,
 \begin{equation} \label{eq:Equations}
 P(A) + P(\bar{A}) = 1
 \end{equation}
+This implies that,
 
-\noindent This implies that,\\
-P(getting an odd number at least once on the die) = 1 - P(getting an even number on every die toss)  \\
-$\therefore$ For this event, (i.e. of getting an even number on all the three outcomes),\\ The total favourable outcomes are 3 \{2,4,6\} out of all the possible outcomes 6 \{1,2,3,4,5,6\}.\\
+Pr(getting an odd number at least once on the die) = 1 - Pr(getting an even number on every die toss) 
+
+Pr(X=1$\cup$Y=1$\cup$Z=1) = 1 - Pr(X=0$\cap$Y=0$\cap$Z=0)
+
+$\therefore$ For this event, (i.e. of getting an even number on all the three outcomes),
+
+ The total favourable outcomes are 3 \{2,4,6\} out of all the possible outcomes 6 \{1,2,3,4,5,6\}.
+  
 $\therefore$ From Equation \ref{eq:Equations},
-\[
-\renewcommand\arraystretch{1.3}
-\begin{array}{rc}
-	&p = 1 -\left(\frac{3}{6} * \frac{3}{6} * \frac{3}{6}\right)\\
-\implies& p = 1 - \left(\frac{1}{2}\right)^3 \\
-\implies& p = 1 - \frac{1}{8}\\
-\implies& p=\frac{7}{8}\\
-\end{array}
-\]
-Hence, \\
-\textbf{Answer:} The probability of getting an odd number atleast once on tossing the die three times is equal to $\left(\frac {7}{8}\right)$.
+
+\begin{align*} 
+	&Pr = 1 -\left(\frac{3}{6} * \frac{3}{6} * \frac{3}{6}\right)\\
+\implies& Pr = 1 - \left(\frac{1}{2}\right)^3 \\
+\implies& Pr = 1 - \frac{1}{8}\\
+\implies& Pr=\frac{7}{8}\\
+\end{align*}
+Hence, 
+
+\textbf{Answer:} The probability of getting an odd number atleast once on tossing the die three times is equal to \(\frac {7}{8}\).
 
 \end{document}
 
 
-\grid
