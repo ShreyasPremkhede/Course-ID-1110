@@ -308,15 +308,11 @@ X =
 1 &\text{,if odd number occurs on the 1$^{st}$ roll of die}\\	
 0 &\text{,otherwise}
 \end{cases}\\
-%\end{align}
-%\begin{align}
 Y = 
 \begin{cases}
 1 &\text{,if odd number occurs on the 2$^{nd}$ roll of die}\\	
 0 &\text{,otherwise}
 \end{cases}\\
-%\end{align}
-%\begin{align}
 Z = 
 \begin{cases}
 1 &\text{,if odd number occurs on the 3$^{rd}$ roll of die}\\	
@@ -329,21 +325,21 @@ Then \pr{A} is equal to the compliment of getting an even number on every die to
 
 $\because$
 
-\begin{equation} \label{eq:Equations}
+\begin{align} \label{eq:Equations}
 \pr{A} + \pr {\bar A} = 1
-\end{equation}
+\end{align}
 $\implies$
 
 Pr(X=1$\cup$Y=1$\cup$Z=1) = 1 - Pr(X=0$\cap$Y=0$\cap$Z=0)
 
-For this event (Pr(X=0$\cap$Y=0$\cap$Z=0)) = \(\frac{3}{6} * \frac{3}{6} * \frac{3}{6}\)
+For this event (Pr(X=0$\cap$Y=0$\cap$Z=0)) = \(\frac{3}{6} \times \frac{3}{6} \times \frac{3}{6}\)
 
-$\therefore$ From Equation \ref{eq:Equations},
+$\therefore$ From Equation \eqref{eq:Equations},
 
-\begin{align*} 
-	&\pr{A} = 1 -\left(\frac{3}{6} * \frac{3}{6} * \frac{3}{6}\right)\\
-\implies& \pr{A} = 1 - \left(\frac{1}{2}\right)^3 = 1 - \frac{1}{8}=\frac{7}{8}
-\end{align*}
+\begin{align} 
+	&\pr{A} = 1 -\left(\frac{3}{6} \times \frac{3}{6} \times \frac{3}{6}\right)\\
+	&= 1 - \left(\frac{1}{2}\right)^3 = 1 - \frac{1}{8}=\frac{7}{8}
+\end{align}
 
 \end{document}
 
