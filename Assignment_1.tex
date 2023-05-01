@@ -299,23 +299,25 @@ columns=fullflexible
 
 
 \textbf{Solution: } 
-
-Let A be the event of getting an odd number atleast once and \pr{A} be its probability.
+Let A be the required event.
 
 Let X be a Binomial random variable, which is the number of times odd number occurs in the three throws of dice.
 
 Let i be the number of times odd number occurs.
 
+Let $p$ be the probability of getting odd number on one throw of dice.
 
-$\therefore$ \pr{X = i} = \(\frac{1}{2} \times \frac{1}{2} \times \frac{1}{2} \times \binom{3}{i}\)
+$\therefore$ \pr{X = i} = \(\binom{3}{i} \cdot p^i \cdot (1-p)^{3-i}\)
 
 \begin{align} 
 \implies 
-	&\pr{X = 1}= \frac{\binom{3}{1}}{8}=\frac{3}{8}\\
+	& p = \frac{1}{2}\\
+\implies 
+	&\pr{X = 1}= \binom{3}{1} \cdot p^1 \cdot (1-p)^{3-1} = \frac{\binom{3}{1}}{8}=\frac{3}{8}\\
 \implies
-	&\pr{X = 2}= \frac{\binom{3}{2}}{8}=\frac{3}{8}\\
+	&\pr{X = 2}= \binom{3}{2} \cdot p^2 \cdot (1-p)^{3-2} = \frac{\binom{3}{2}}{8}=\frac{3}{8}\\
 \implies
-	&\pr{X = 3}= \frac{\binom{3}{3}}{8}=\frac{1}{8}
+	&\pr{X = 3}= \binom{3}{3} \cdot p^3 \cdot (1-p)^{3-3} = \frac{\binom{3}{3}}{8}=\frac{1}{8}
 \end{align}
 $\therefore$,
 \begin{align}
