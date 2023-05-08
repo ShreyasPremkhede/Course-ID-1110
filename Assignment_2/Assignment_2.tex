@@ -326,33 +326,7 @@ Let Cumulative Distribution function be:
 	F_X(i)&=\pr{X\leq i}\\
 	\pr{X=i}&= \comb{10}{i}p^i(1-p)^{10-i}\\
 \therefore   
-	F_X(i)&=\sum_{r=0}^i{\comb{10}{r}}p^r(1-p)^{10-r}\\
-\implies
-	F_X(0)&=\comb{10}{0}p^0(1-p)^{10-0}\\	     
-\implies
-	F_X(0)&=\comb{10}{0}p^0 (1-p)^{10-0} = \frac{\comb{10}{0}}{10^{10}}=\frac{1}{10^{10}}\\
-	F_X(1)&=\frac{1}{10^{10}} + \comb{10}{1}p^1(1-p)^{10-1}\\ 
-\implies
-	F_X(1)&= \frac{1}{10^{10}}+ \frac{9}{10^9} = \frac{91}{10^{10}}
-\end{align}
-\begin{align}	
-	F_X(2)&=\frac{91}{10^{10}} + \comb{10}{2}p^2(1-p)^{10-2}\\ 
-\implies	
-	F_X(2)&= \frac{91}{10^{10}} + \frac{3645}{10^{10}} = \frac{3736}{10^{10}}\\	     	     
-	F_X(3)&=\frac{3736}{10^{10}} + \comb{10}{3}p^3(1-p)^{10-3}\\ 
-\implies	
-	F_X(3)&= \frac{3645}{10^{10}} + \frac{8748}{10^9} = \frac{91125}{10^{10}}
-\end{align}
-\begin{align}
-	F_X(4)&=\frac{91125}{10^{10}} + \comb{10}{4}p^4(1-p)^{10-4}\\ 
-\implies	
-	F_X(4)&= \frac{91125}{10^{10}} + \frac{137781}{10^9} = \frac{1468935}{10^{10}}\\
-	F_X(5)&=\frac{1468935}{10^{10}} + \comb{10}{5}p^5(1-p)^{10-5}\\ 
-\implies	
-	F_X(5)&= \frac{1468935}{10^{10}} + \frac{14880348}{10^{10}} = \frac{16349283}{10^{10}}\\
-	F_X(6)&=\frac{16349283}{10^{10}} + \comb{10}{6}p^6(1-p)^{10-4}\\ 
-\implies	
-	F_X(6)&= \frac{16349283}{10^{10}} + \frac{11160261}{10^9} = \frac{127951893}{10^{10}}
+	F_X(i)&=\sum_{r=0}^i{\comb{10}{r}}p^r(1-p)^{10-r}
 \end{align}	   
 
 $\therefore$,
