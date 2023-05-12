@@ -316,97 +316,72 @@ where, $p$ be the probability of a person being left-handed.
 
 $n$ is the number of people.
 
-\textbf{Proof of Gaussian Theorem:}
+\textbf{Proof of Gaussian Approximation on Binomial:}
+By defination,
+\begin{align}
+P(X = k) &= \comb{n}{k} p^k (1-p)^{n-k}  
+\end{align}
+By Stirling's formula,
 
-Let two independent random variables be X and Y with PDF's $f_X(x)$ and $f_Y(y)$
-
+For \( m \to \infty\),
 \begin{align}
-\therefore \, f_{XY}(x,y) &= f_X(x) f_Y(y)
+m! \sim \sqrt{2\pi m}e^{-m}m^m
 \end{align}
-
-Since the distribution is identical and symmetric,
+Hence,
 \begin{align}
-	f_{XY}(x,y) &= g(x^2 + y^2)\\
-	f_X(x) f_Y(y)&=g(x^2 + y^2)
+P(X = k) = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}\\
 \end{align}
-For $y$=0,
+Hence,
 \begin{align}
-f_X(x) &\propto g(x^2)
-\end{align}
-For $x$=0,
-\begin{align}
-f_X(y) &\propto g(y^2)
-\end{align}
-
-
-Multiplying the above two equations,
-\begin{align}
-	f_X(x)f_X(y)&\propto g(x^2) g(y^2)\\
-\implies
-	f_{XY}(x,y)&\propto g(x^2) g(y^2)\\
-\implies
-	g(x^2 + y^2)&\propto g(x^2) g(y^2)
-\end{align}
-\(g(x)\) can be \(Ae^{-Bx}\)
-\begin{align}
-\therefore, \, f_X(x) &\propto g(x^2) = Ae^{-Bx^2}\\
-	f_X(x) &= Ae^{-Bx^2}
-\end{align}
-
-By axioms of PDF:
-\begin{align}
-\int_{-\infty}^{\infty} f_X(x)dx &= 1\\
-A \int_0^{\infty} e^{-Bx^2}dx &= \frac{1}{2}
-\end{align}
-Similarly,
-\begin{align}
-A \int_0^{\infty} e^{-By^2}dy &= \frac{1}{2}
-\end{align}
-
-Multiplying the above two equations,
-\begin{align}
-\int_0^{\infty}\int_0^{\infty} e^{-Bx^2}e^{-By^2}dxdy &= \frac{1}{4A^2}\\
-\int_0^{\infty}\int_0^{\infty} e^{-B(x^2+y^2)}dxdy &= \frac{1}{4A^2}
+&\sim \frac{\sqrt{2\pi n}e^{-n}n^n p^k (1-p)^{n-k}}{\sqrt{2\pi k}e^{-k}k^k \sqrt{2\pi (n-k)}e^{-(n-k)}(n-k)^{n-k}}\\
+&= \left(\frac{p}{k}\right)\left(\frac{1-p}{n-k}\right)^{n-k}n^n \sqrt{\frac{n}{2\pi k (n-k)}}\\
+&= \left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k}\sqrt{\frac{n}{2\pi k (n-k)}}
 \end{align}
 \\
-By polar co-ordinates,
+Now by identities,
 \begin{align}
-\int_0^{\infty}\int_0^{\infty} e^{-Bx^2}e^{-By^2}dxdy &= \int_0^{\frac{\pi}{2}}\int_0^{\infty} e^{-Br^2} r \, dr \, d\theta\\
-\int_0^{\infty}\int_0^{\infty} e^{-B(x^2+y^2)}dxdy &= \int_0^{\frac{\pi}{2}} \frac{d\theta}{2B}
+ln\left(\frac{np}{k}\right)&= -ln\left(1 + \frac{k-np}{np}\right)\\
+ln\left(\frac{n(1-p)}{n-k}\right)&= -ln\left(1 - \frac{k-np}{n(1-p)}\right)
 \end{align}
 \\
-\begin{align}
-\implies
-	\frac{1}{4A^2}	&= \frac{\pi}{4B}\\
-\implies 
-	A &= \sqrt{\frac{B}{\pi}}
-\end{align}
+By approximation,
 
-Since,
+For \( y\to 0\)
 \begin{align}
-\int_{-\infty}^{\infty} x^2 f(x)dx = \sigma^2\\
+ln(1+y) &\sim y - \frac{y^2}{2} +  \frac{y^3}{3} ...
+\end{align}
+\\
+Hence,
+\begin{align}
+ln\left(\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k}\right) = 
+\end{align}
+\begin{align}
+-k ln\left(1 + \frac{k-np}{np}\right) + (n-k)ln\left(1 - \frac{k-np}{n(1-p)}\right)
+\end{align}
+$\therefore$,
+\begin{align}
+ln\left(\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k}\right) \sim - \frac{(k-np)^2)}{2np(1-p)}
+\end{align}
+$\therefore$,
+\begin{align}
+\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k} \sim e^{-\frac{(k-np)^2)}{2np(1-p)}}
+\end{align}
+\\
+By approximating that, $k-np$ is of order $\sqrt{n}$
+\begin{align}
+k-np &\approx \sqrt{n}\\
+n -k &\approx n(1-p) - \sqrt{n}\\
+k(n -k) &\approx n^2p(1-p)\\
 \implies
-2 \sqrt{\frac{B}{\pi}}\int_{0}^{\infty} x^2 e^{-Bx^2}dx = \sigma^2
+	\sqrt{\frac{n}{2\pi k (n-k)}} &\sim \frac{1}{\sqrt{2\pi np (n-p)}}
 \end{align}
 \\
-Now by IBP,
 \begin{align}
-u &= x\\ dv &= x e^{-Bx^2}
-\end{align}
-Hence the values,
-\begin{align}
-B = \frac{1}{2\sigma^2} \, \text{ and } \, A = \frac{1}{\sqrt{2\pi\sigma^2}}
-\end{align}
-\begin{align}
-\implies f_X(x) &= \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{x^2}{2\sigma^2}}
-\end{align}
-
-For mean $\mu$,
-\begin{align}
-f_X(x) &= \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+P(X = k) &= \frac{e^{-\frac{(k-np)^2)}{2np(1-p)}}}{\sqrt{2\pi np (n-p)}} \\
+P(X = k) &= \frac{e^{-\frac{(k-\mu)^2)}{2\sigma^2}}}{\sqrt{2\pi\sigma}}
 \end{align}
 \\
-By Q - function,
+By Q-function,
 \begin{align}
 P(X \geq 4) &= 1 - P(X < 4)\\
 	    &= 1 - F_X(3)
