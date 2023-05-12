@@ -292,7 +292,7 @@ columns=fullflexible
 %\newcommand{\Var}{$\sigma ^2$}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\title{AI 1110 Assignment 2}
+\title{AI 1110 Assignment 3}
 \begin{document}
 \author{Name: Shreyas Premkhede\\Roll no.: CS22BTECH11053}
 \maketitle
@@ -315,10 +315,98 @@ X &\sim Bin(n,p)\\
 where, $p$ be the probability of a person being left-handed.
 
 $n$ is the number of people.
-%
-%Let $i$ be the number of times odd number occurs.
 
-By Gaussian approximation,
+\textbf{Proof of Gaussian Theorem:}
+
+Let two independent random variables be X and Y with PDF's $f_X(x)$ and $f_Y(y)$
+
+\begin{align}
+\therefore \, f_{XY}(x,y) &= f_X(x) f_Y(y)
+\end{align}
+
+Since the distribution is identical and symmetric,
+\begin{align}
+	f_{XY}(x,y) &= g(x^2 + y^2)\\
+	f_X(x) f_Y(y)&=g(x^2 + y^2)
+\end{align}
+For $y$=0,
+\begin{align}
+f_X(x) &\propto g(x^2)
+\end{align}
+For $x$=0,
+\begin{align}
+f_X(y) &\propto g(y^2)
+\end{align}
+
+
+Multiplying the above two equations,
+\begin{align}
+	f_X(x)f_X(y)&\propto g(x^2) g(y^2)\\
+\implies
+	f_{XY}(x,y)&\propto g(x^2) g(y^2)\\
+\implies
+	g(x^2 + y^2)&\propto g(x^2) g(y^2)
+\end{align}
+\(g(x)\) can be \(Ae^{-Bx}\)
+\begin{align}
+\therefore, \, f_X(x) &\propto g(x^2) = Ae^{-Bx^2}\\
+	f_X(x) &= Ae^{-Bx^2}
+\end{align}
+
+By axioms of PDF:
+\begin{align}
+\int_{-\infty}^{\infty} f_X(x)dx &= 1\\
+A \int_0^{\infty} e^{-Bx^2}dx &= \frac{1}{2}
+\end{align}
+Similarly,
+\begin{align}
+A \int_0^{\infty} e^{-By^2}dy &= \frac{1}{2}
+\end{align}
+
+Multiplying the above two equations,
+\begin{align}
+\int_0^{\infty}\int_0^{\infty} e^{-Bx^2}e^{-By^2}dxdy &= \frac{1}{4A^2}\\
+\int_0^{\infty}\int_0^{\infty} e^{-B(x^2+y^2)}dxdy &= \frac{1}{4A^2}
+\end{align}
+\\
+By polar co-ordinates,
+\begin{align}
+\int_0^{\infty}\int_0^{\infty} e^{-Bx^2}e^{-By^2}dxdy &= \int_0^{\frac{\pi}{2}}\int_0^{\infty} e^{-Br^2} r \, dr \, d\theta\\
+\int_0^{\infty}\int_0^{\infty} e^{-B(x^2+y^2)}dxdy &= \int_0^{\frac{\pi}{2}} \frac{d\theta}{2B}
+\end{align}
+\\
+\begin{align}
+\implies
+	\frac{1}{4A^2}	&= \frac{\pi}{4B}\\
+\implies 
+	A &= \sqrt{\frac{B}{\pi}}
+\end{align}
+
+Since,
+\begin{align}
+\int_{-\infty}^{\infty} x^2 f(x)dx = \sigma^2\\
+\implies
+2 \sqrt{\frac{B}{\pi}}\int_{0}^{\infty} x^2 e^{-Bx^2}dx = \sigma^2
+\end{align}
+\\
+Now by IBP,
+\begin{align}
+u &= x\\ dv &= x e^{-Bx^2}
+\end{align}
+Hence the values,
+\begin{align}
+B = \frac{1}{2\sigma^2} \, \text{ and } \, A = \frac{1}{\sqrt{2\pi\sigma^2}}
+\end{align}
+\begin{align}
+\implies f_X(x) &= \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{x^2}{2\sigma^2}}
+\end{align}
+
+For mean $\mu$,
+\begin{align}
+f_X(x) &= \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\end{align}
+\\
+By Q - function,
 \begin{align}
 P(X \geq 4) &= 1 - P(X < 4)\\
 	    &= 1 - F_X(3)
@@ -334,30 +422,22 @@ Hence,
 	\sigma^{2}&= 10 \times 0.1 \times 0.9 = 0.9\\
 	\sigma&=\sqrt{np(1-p)}\\
 \implies
-	\sigma&= \sqrt{0.9}
+	\sigma&= \sqrt{0.9}\\
+\implies
+	Z &= \frac{X-\mu}{\sigma}\\
+	Z &= \frac{3-1}{\sqrt{0.9}}\\
+	Z &= 2.108185107
 \end{align}
-
-To calculate error function:
+By Z-score table,
+\(P(X \leq 3) = F_X(3) = 0.9854\)\\
+Hence,
 \begin{align}
-x &= \frac {3-\mu}{\sqrt{2} \sigma}\\
-x &= \frac {3-1}{\sqrt{1.8}}\\
-x &= 1.490711985
+P(X \geq 4) &= 1 - 0.9854\\
+	  &= 0.0146
 \end{align}
-$\therefore \, erf(x)$ implies,
-\begin{align}
-erf(1.490711985) &= \int_{0}^{1.490711985} \frac{1}{\sqrt{2\pi}} e^{-x^2}dx\\
-erf(1.490711985) &= 0.9649836\\
-F_X(3) &= 0.5 \cdot (1 + erf(1.490711985))\\
-F_X(3) &= 0.9824918\\
-P(X \geq 4) &= 1 - F_X(3)\\
-	    &= 1 - 0.9824918\\
-	    &= 0.0175082
-\end{align}
-
 So, The answer differs by,
 
-\(0.0175082 - 0.0127951893 = 0.004713011\)
-
+\(0.0146 - 0.0127951893 = 0.001804811\)
 \end{document}
 
 
