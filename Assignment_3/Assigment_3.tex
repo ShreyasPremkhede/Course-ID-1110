@@ -319,7 +319,7 @@ $n$ is the number of people.
 \textbf{Proof of Gaussian Approximation on Binomial:}
 By defination,
 \begin{align}
-P(X = k) &= \comb{n}{k} p^k (1-p)^{n-k}  
+\pr{X = k} &= \comb{n}{k} p^k (1-p)^{n-k}  
 \end{align}
 By Stirling's formula,
 
@@ -329,7 +329,7 @@ m! \sim \sqrt{2\pi m}e^{-m}m^m
 \end{align}
 Hence,
 \begin{align}
-P(X = k) = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}\\
+\pr{X = k} = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k}\\
 \end{align}
 Hence,
 \begin{align}
@@ -377,13 +377,13 @@ k(n -k) &\approx n^2p(1-p)\\
 \end{align}
 \\
 \begin{align}
-P(X = k) &= \frac{e^{-\frac{(k-np)^2)}{2np(1-p)}}}{\sqrt{2\pi np (n-p)}} \\
-P(X = k) &= \frac{e^{-\frac{(k-\mu)^2)}{2\sigma^2}}}{\sqrt{2\pi\sigma}}
+\pr{X = x} &= \frac{e^{-\frac{(x-np)^2}{2np(1-p)}}}{\sqrt{2\pi np (n-p)}} \\
+\pr{X = x} &= \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi\sigma}}
 \end{align}
 \\
 By Q-function,
 \begin{align}
-P(X \geq 4) &= 1 - P(X < 4)\\
+\pr{X \geq 4} &= 1 - \pr{X < 4}\\
 	    &= 1 - F_X(3)
 \end{align}
 
@@ -404,10 +404,10 @@ Hence,
 	Z &= 2.108185107
 \end{align}
 By Z-score table,
-\(P(X \leq 3) = F_X(3) = 0.9854\)\\
+$ \pr{X \leq 3} = F_X(3) = 0.9854$\\
 Hence,
 \begin{align}
-P(X \geq 4) &= 1 - 0.9854\\
+\pr{X \geq 4} &= 1 - 0.9854\\
 	  &= 0.0146
 \end{align}
 So, The answer differs by,
