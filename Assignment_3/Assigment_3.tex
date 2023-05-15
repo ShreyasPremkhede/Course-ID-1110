@@ -378,13 +378,11 @@ k(n -k) &\approx n^2p(1-p)\\
 \\
 \begin{align}
 \pr{X = x} &= \frac{e^{-\frac{(x-np)^2}{2np(1-p)}}}{\sqrt{2\pi np (n-p)}} \\
-\pr{X = x} &= \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi\sigma}}
+\pr{X = x} &= \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}
 \end{align}
 \\
-By Q-function,
 \begin{align}
-\pr{X \geq 4} &= 1 - \pr{X < 4}\\
-	    &= 1 - F_X(3)
+\pr{X > 3} &= Q(Z)
 \end{align}
 
 Hence,
@@ -403,11 +401,14 @@ Hence,
 	Z &= \frac{3-1}{\sqrt{0.9}}\\
 	Z &= 2.108185107
 \end{align}
-By Z-score table,
-$ \pr{X \leq 3} = F_X(3) = 0.9854$\\
-Hence,
+$\therefore$
+By Q-function,
 \begin{align}
-\pr{X \geq 4} &= 1 - 0.9854\\
+Q(Z) &= \int_Z^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy\\
+     &= 0.0146
+\end{align}
+\begin{align}
+\pr{X > 3} &= Q(Z)\\
 	  &= 0.0146
 \end{align}
 So, The answer differs by,
