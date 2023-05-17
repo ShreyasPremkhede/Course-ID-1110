@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.24)  15 MAY 2023 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.24)  17 MAY 2023 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1021,25 +1021,73 @@ tex
 \c@lemma=\count334
 \c@example=\count335
 \c@rem=\count336
+ (/usr/share/texlive/texmf-dist/tex/latex/tasks/tasks.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2022-01-12 L3 Experimental document command parser
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2022-01-12 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen323
+\l__xtemplate_tmp_int=\count337
+\l__xtemplate_tmp_muskip=\muskip18
+\l__xtemplate_tmp_skip=\skip64
+)
+Package: tasks 2022/01/08 v1.4a lists with columns filled horizontally
+\g__tasks_total_items_int=\count338
+\l__tasks_columns_int=\count339
+\g__tasks_rows_int=\count340
+\g__tasks_current_col_num_int=\count341
+\g__tasks_current_row_num_int=\count342
+\l__tasks_item_columns_int=\count343
+\g__tasks_env_int=\count344
+\l__tasks_start_int=\count345
+\l__tasks_item_indent_dim=\dimen324
+\l__tasks_item_default_indent_dim=\dimen325
+\l__tasks_item_width_dim=\dimen326
+\l__tasks_label_width_dim=\dimen327
+\l__tasks_label_default_width_dim=\dimen328
+\l__tasks_label_offset_dim=\dimen329
+\l__tasks_label_default_offset_dim=\dimen330
+\l__tasks_column_sep_dim=\dimen331
+\l__tasks_correction_dim=\dimen332
+\l__tasks_full_width_dim=\dimen333
+\l__tasks_after_item_skip=\skip65
+\l__tasks_custom_after_item_skip=\skip66
+\l__tasks_before_list_skip=\skip67
+\l__tasks_after_list_skip=\skip68
+\l__tasks_item_coffin=\box73
+\l__tasks_label_coffin=\box74
+\c@task=\count346
+\l__tasks_tmpa_int=\count347
+\l__tasks_tmpb_int=\count348
+\l__tasks_tmpa_coffin=\box75
+\l__tasks_tmpa_box=\box76
+
+Package xtemplate Info: Declaring object type 'tasks' taking 3 argument(s) on
+(xtemplate)             line 450.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/tasks/tasks.cfg))
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 2
 96.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
-)
-(./Assigment_3.aux)
+) (./Assigment_3.aux)
 \openout1 = `Assigment_3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 296.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
 296.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 296.
 LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 296.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
 296.
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 296.
@@ -1118,16 +1166,16 @@ LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <24> not available
 -- Lines per column: 50 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count337
-\scratchdimen=\dimen323
-\scratchbox=\box73
-\nofMPsegments=\count338
-\nofMParguments=\count339
+\scratchcounter=\count349
+\scratchdimen=\dimen334
+\scratchbox=\box77
+\nofMPsegments=\count350
+\nofMParguments=\count351
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count340
-\MPscratchDim=\dimen324
-\MPnumerator=\count341
-\makeMPintoPDFobject=\count342
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen335
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
 \everyMPtoPDFconversion=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1138,7 +1186,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count343
+\c@lstlisting=\count355
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
 (Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 296.
@@ -1161,7 +1209,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count344
+\c@section@level=\count356
 )
 LaTeX Info: Redefining \ref on input line 296.
 LaTeX Info: Redefining \pageref on input line 296.
@@ -1201,12 +1249,12 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 3
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 377--379
+Underfull \hbox (badness 10000) in paragraph at lines 378--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--384
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
 
  []
 
@@ -1216,29 +1264,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--384
 ] [2
 
 ] (./Assigment_3.aux)
-Package rerunfilecheck Info: File `Assigment_3.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `Assigment_3.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Assigment_3.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  7FA65983A535584B6E6FAEB8C42AD626;391.
  ) 
 Here is how much of TeX's memory you used:
- 29082 strings out of 478287
- 573976 string characters out of 5849289
- 866852 words of memory out of 5000000
- 46636 multiletter control sequences out of 15000+600000
- 529200 words of font info for 145 fonts, out of 8000000 for 9000
+ 29640 strings out of 478287
+ 589274 string characters out of 5849289
+ 876363 words of memory out of 5000000
+ 47175 multiletter control sequences out of 15000+600000
+ 530254 words of font info for 147 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,12n,96p,503b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,12n,96p,503b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
-onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Assigment_3.pdf (2 pages, 60945 bytes).
+1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
+fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on Assigment_3.pdf (2 pages, 65366 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 40 named destinations out of 1000 (max. 500000)
+ 116 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 43 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

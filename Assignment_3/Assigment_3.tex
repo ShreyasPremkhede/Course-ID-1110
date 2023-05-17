@@ -289,9 +289,9 @@ columns=fullflexible
 %\IEEEpeerreviewmaketitle
 
 \newcommand \tab [1][1cm]{\hspace*{#1}}
-%\newcommand{\Var}{$\sigma ^2$}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{tasks}
 \title{AI 1110 Assignment 3}
 \begin{document}
 \author{Name: Shreyas Premkhede\\Roll no.: CS22BTECH11053}
@@ -316,6 +316,7 @@ where, $p$ be the probability of a person being left-handed.
 
 $n$ is the number of people.
 
+\section{Proof}
 \textbf{Proof of Gaussian Approximation on Binomial:}
 By defination,
 \begin{align}
@@ -360,11 +361,11 @@ ln\left(\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k}\right
 \end{align}
 $\therefore$,
 \begin{align}
-ln\left(\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k}\right) \sim - \frac{(k-np)^2)}{2np(1-p)}
+ln\left(\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k}\right) \sim - \frac{(k-np)^2}{2np(1-p)}
 \end{align}
 $\therefore$,
 \begin{align}
-\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k} \sim e^{-\frac{(k-np)^2)}{2np(1-p)}}
+\left(\frac{np}{k}\right)^{k}\left(\frac{n(1-p)}{n-k}\right)^{n-k} \sim e^{-\frac{(k-np)^2}{2np(1-p)}}
 \end{align}
 \\
 By approximating that, $k-np$ is of order $\sqrt{n}$
@@ -381,12 +382,10 @@ k(n -k) &\approx n^2p(1-p)\\
 \pr{X = x} &= \frac{e^{-\frac{(x-\mu)^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}
 \end{align}
 \\
-\begin{align}
-\pr{X > 3} &= Q(Z)
-\end{align}
 
+\section{Answer by Q-function}
 Hence,
-\begin{align} 
+\begin{align}
 	\mu &= np\\
 \implies
 	\mu &= 10 \times 0.1 = 1\\
@@ -402,6 +401,7 @@ Hence,
 	Z &= 2.108185107
 \end{align}
 $\therefore$
+\section{Answer}
 By Q-function,
 \begin{align}
 Q(Z) &= \int_Z^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy\\
@@ -411,6 +411,8 @@ Q(Z) &= \int_Z^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{y^2}{2}}dy\\
 \pr{X > 3} &= Q(Z)\\
 	  &= 0.0146
 \end{align}
+
+\section{Comparison }
 So, The answer differs by,
 
 \(0.0146 - 0.0127951893 = 0.001804811\)
